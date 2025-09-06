@@ -2,14 +2,12 @@ import os
 import fitz  # PyMuPDF
 import pandas as pd
 from flask import Flask, render_template, request, send_file, session
-from dotenv import load_dotenv
 import google.generativeai as genai
 from docx import Document
 from pptx import Presentation
 from fpdf import FPDF
 from werkzeug.utils import secure_filename
 
-load_dotenv()
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = "uploads"
 app.config["EXPORT_FOLDER"] = "exports"
