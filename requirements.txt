@@ -1,4 +1,8 @@
 Flask
-google-generativeai
 gunicorn
+google-generativeai
+pandas
+fpdf
+python-docx
+python-pptx
 PyMuPDF
