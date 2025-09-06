@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Flashcard Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        header { background: linear-gradient(90deg, #4e54c8, #8f94fb); color: white; padding: 1.5rem 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card { border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .btn-primary { background-color: #4e54c8; border: none; }
+        .btn-primary:hover { background-color: #3b40a4; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI Flashcard Generator</h1>
+        <p>Upload files or paste text — Powered by Google Gemini AI</p>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card p-4">
+                    <form action="/" method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label class="form-label">Enter Text</label>
+                            <textarea name="text" class="form-control" rows="5" placeholder="Paste your content here..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Or Upload File (PDF, DOCX, PPTX, TXT)</label>
+                            <input type="file" name="file" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Number of Flashcards</label>
+                            <input type="number" name="count" class="form-control" value="5" min="1" max="20">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Generate Flashcards</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 p-3 bg-light text-muted">
+        &copy; 2025 AI Flashcard Generator. All Rights Reserved.
+    </footer>
+</body>
+</html>

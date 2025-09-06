@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+</head>
+<body>
+    <h2>Generated Topics</h2>
+    {% for t, date in topics %}
+        <p><a href="/results/{{ t }}">{{ t }}</a> - {{ date }}</p>
+    {% endfor %}
+</body>
+</html>
