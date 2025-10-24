@@ -52,7 +52,7 @@ def extract_text_from_file(filepath):
     return text.strip()
 
 def generate_flashcards(input_text, count):
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash")
     prompt = f"""
     Generate {count} flashcards from the following content:
 
